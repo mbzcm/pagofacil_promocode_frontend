@@ -19,6 +19,17 @@ yarn build
 ```bash
 yarn start
 ```
+## Configuracion
+
+Agregue un archivo .env en la raíz del proyecto con las siguientes configuraciones
+
+```javascript
+
+
+GENERATE_SOURCEMAP=false
+
+REACT_APP_END_POINT =  [URL_ENDPOINT_PAGOFACIL_PROMOCODE_BACKEND]
+
 
 
 
