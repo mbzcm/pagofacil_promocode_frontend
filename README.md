@@ -13,12 +13,12 @@ yarn install
 ```
 ```
 
-```bash
+```
 yarn build
 ```
 ```
 
-```bash
+```
 yarn start
 ```
 ```
