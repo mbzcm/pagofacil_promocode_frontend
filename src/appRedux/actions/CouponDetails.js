@@ -45,7 +45,7 @@ export const AddCoupon = (campaignIdExternal, name, email) => {
     dispatch({type: FETCH_START});
     axios.post('/api/v1/coupon',{ campaignIdExternal, name, email }
     ).then(({data}) => {
-      console.log("getCouponDetails: ", data);
+      console.log("AddCoupon: ", data);
       if (data) {
         dispatch({type: FETCH_SUCCESS });
         dispatch({type: COUPON_DATA, payload: data});
@@ -66,14 +66,10 @@ export const UpdateCoupon = (couponCode) => {
     dispatch({type: FETCH_START});
     axios.put('/api/v1/coupon',{ couponCode}
     ).then(({data}) => {
-      console.log("getCouponDetails: ", data);
-      if (data) {
+      console.log("UpdateCoupon: ", data);
         dispatch({type: FETCH_SUCCESS });
         dispatch({type: COUPON_UPDATE_DATA, payload: "Success"});
         dispatch({type: FETCH_ERROR_UPDATE, payload: ""});
-      } else {
-        dispatch({type: FETCH_ERROR, payload: data});
-      }
     }).catch(function (error) {
       dispatch({type: FETCH_ERROR_UPDATE, payload: error.response.data});
       console.log("Error****:", error.message);

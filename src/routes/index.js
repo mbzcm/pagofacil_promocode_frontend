@@ -2,8 +2,8 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 
 import CouponDetails from "./couponDetails/index";
-import Campaign from "../../../front_end/src/routes/campaign/index";
-import Coupon from "../../../front_end/src/routes/coupon/index";
+import Campaign from "./campaign/index";
+import Coupon from "./coupon/index";
 
 
 const App = ({match}) => (
