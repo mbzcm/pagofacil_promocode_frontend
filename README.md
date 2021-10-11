@@ -7,6 +7,16 @@ pagofacil_promocode_frontend es un repositorio implementado en ReactJs 17.0.*.
 Use el administrador de paquetes  [yarn](https://yarnpkg.com/getting-started/install) para instalar pagofacil_promocode_frontend.
 
 
+## Configuracion
+
+Agregue un archivo .env en la raíz del proyecto con las siguientes configuraciones
+
+```sh
+GENERATE_SOURCEMAP=false
+REACT_APP_END_POINT =  [URL_ENDPOINT_PAGOFACIL_PROMOCODE_BACKEND]
+```
+
+
 Ejecute los comandos en el siguiente orden
 ```bash
 yarn install
@@ -19,16 +29,6 @@ yarn build
 ```bash
 yarn start
 ```
-## Configuracion
-
-Agregue un archivo .env en la raíz del proyecto con las siguientes configuraciones
-
-```javascript
-
-
-GENERATE_SOURCEMAP=false
-
-REACT_APP_END_POINT =  [URL_ENDPOINT_PAGOFACIL_PROMOCODE_BACKEND]
 
 
 
