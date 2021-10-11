@@ -11,17 +11,15 @@ Ejecute los comandos en el siguiente orden
 ```bash
 yarn install
 ```
-```
 
-```
+```bash
 yarn build
 ```
-```
 
-```
+```bash
 yarn start
 ```
-```
+
 
 
 ## Contributing
