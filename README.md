@@ -10,9 +10,15 @@ Use el administrador de paquetes  [yarn](https://yarnpkg.com/getting-started/ins
 Ejecute los comandos en el siguiente orden
 ```bash
 yarn install
+```
+```
 
+```bash
 yarn build
+```
+```
 
+```bash
 yarn start
 ```
 ```
