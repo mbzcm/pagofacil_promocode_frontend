@@ -78,4 +78,15 @@ export const UpdateCoupon = (couponCode) => {
 };
 
 
+export const ResetStates = (couponCode) => {
+  return (dispatch,getState) => {
+    dispatch({type: COUPON_UPDATE_DATA, payload: ""});
+    dispatch({type: COUPON_DATA, payload: ""});
+    dispatch({type: FETCH_ERROR_UPDATE, payload: ""});
+    dispatch({type: FETCH_ERROR, payload: ""});
+
+  }
+};
+
+
 

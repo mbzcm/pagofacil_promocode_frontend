@@ -6,7 +6,7 @@ import { Button,  Col, Form, Input, Modal, Row} from "antd";
 import copy from 'copy-to-clipboard';
 import Auxiliary from "../../util/Auxiliary";
 import {connect} from "react-redux";
-import {getCampaigns , AddCoupon} from "../../appRedux/actions";
+import {getCampaigns, AddCoupon, ResetStates} from "../../appRedux/actions";
 import { Alert,Space  } from 'antd';
 
 const customEnterAnimation = {
@@ -28,6 +28,8 @@ class Campaign extends Component {
       visible: true,
       currentCampaignIdExternal: campaignIdExternal
     });
+
+    this.props.ResetStates();
   };
   handleOk = () => {
     this.setState({loading: true});
@@ -149,7 +151,7 @@ const mapStateToProps = ({campaign, coupon}) => {
   return { campaigns, couponData,couponError }
 };
 
-export default connect(mapStateToProps, {getCampaigns, AddCoupon})(Campaign);
+export default connect(mapStateToProps, {getCampaigns, AddCoupon, ResetStates})(Campaign);
 
 
 
