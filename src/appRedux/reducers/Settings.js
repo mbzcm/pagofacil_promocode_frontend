@@ -6,13 +6,13 @@ import {
   NAV_STYLE_MINI_SIDEBAR,
   THEME_COLOR,
   THEME_TYPE,
-  THEME_TYPE_SEMI_DARK, UPDATE_RTL_STATUS, ORANGE,
+  THEME_TYPE_LITE, UPDATE_RTL_STATUS, ORANGE,
 } from "../../constants/ThemeSetting";
 
 const initialSettings = {
   navStyle: NAV_STYLE_MINI_SIDEBAR,
   layoutType: LAYOUT_TYPE_FULL,
-  themeType: THEME_TYPE_SEMI_DARK,
+  themeType: THEME_TYPE_LITE,
   themeColor: ORANGE,
 
   isDirectionRTL: false,

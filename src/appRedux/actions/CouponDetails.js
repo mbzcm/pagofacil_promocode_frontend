@@ -20,10 +20,10 @@ export const setInitUrl = (url) => {
 
 
 
-export const getCouponDetails = (campaignExternalId) => {
+export const getCouponDetails = () => {
   return (dispatch,getState) => {
     dispatch({type: FETCH_START});
-    axios.get('/api/v1/coupon/' + campaignExternalId,
+    axios.get('/api/v1/coupon',
     ).then(({data}) => {
       console.log("getCouponDetails: ", data);
       if (data) {

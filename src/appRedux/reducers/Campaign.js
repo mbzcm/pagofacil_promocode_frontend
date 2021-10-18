@@ -1,4 +1,4 @@
-import {INIT_URL, CAMPAIGN_DATA} from "../../constants/ActionTypes";
+import {INIT_URL, CAMPAIGN_DATA, CAMPAIGN_DATA_FILTER,CAMPAIGN_CATEGORY_DATA} from "../../constants/ActionTypes";
 
 const INIT_STATE = {
   initURL: '',
@@ -17,6 +17,21 @@ export default (state = INIT_STATE, action) => {
       return {
         ...state,
         campaigns: action.payload,
+        campaignsFilter: action.payload,
+      };
+    }
+
+    case CAMPAIGN_DATA_FILTER: {
+      return {
+        ...state,
+        campaignsFilter: action.payload,
+      };
+    }
+
+    case CAMPAIGN_CATEGORY_DATA: {
+      return {
+        ...state,
+        categoryCampaign: action.payload,
       };
     }
 

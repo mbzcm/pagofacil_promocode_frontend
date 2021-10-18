@@ -12,7 +12,7 @@ class CouponDetails extends React.Component {
 
   constructor(props) {
     super(props);
-    this.props.getCouponDetails('8031B2F8-932B-422E-A00D-C505BC03029A');
+    this.props.getCouponDetails();
   }
 
   handleChange = (pagination, filters, sorter) => {
@@ -44,7 +44,15 @@ class CouponDetails extends React.Component {
     sortedInfo = sortedInfo || {};
     filteredInfo = filteredInfo || {};
     const { couponDetails } = this.props;
-    const columns = [{
+    const columns = [
+      {
+        title: 'CampaingName',
+        dataIndex: 'campaignName',
+        key: 'campaignName',
+        sorter: (a, b) => a.campaignName.length - b.campaignName.length,
+        sortOrder: sortedInfo.columnKey === 'campaignName' && sortedInfo.order,
+      },
+      {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
@@ -69,12 +77,26 @@ class CouponDetails extends React.Component {
       filteredValue: filteredInfo.couponCode || null,
       sorter: (a, b) => a.couponCode.length - b.couponCode.length,
       sortOrder: sortedInfo.columnKey === 'couponCode' && sortedInfo.order,
-    }];
+    },
+      {
+        title: 'CreatedDate',
+        dataIndex: 'createdDate',
+        key: 'createdDate',
+        filteredValue: filteredInfo.createdDate || null,
+        sorter: (a, b) => a.createdDate.length - b.createdDate.length,
+        sortOrder: sortedInfo.columnKey === 'createdDate' && sortedInfo.order,
+      },
+      {
+        title: 'UpdatedDate',
+        dataIndex: 'updatedDate',
+        key: 'updatedDate',
+        filteredValue: filteredInfo.updatedDate || null,
+        sorter: (a, b) => a.updatedDate.length - b.updatedDate.length,
+        sortOrder: sortedInfo.columnKey === 'updatedDate' && sortedInfo.order,
+      }];
     return (
-      <Card title="Reset Filter">
-        <div className="table-operations">
-          <Button onClick={this.setNameSort}>Sort Name</Button>
-        </div>
+      <Card title="Reporte Cupones">
+
         <Table className="gx-table-responsive" columns={columns} dataSource={couponDetails} onChange={this.handleChange}/>
       </Card>
     );
